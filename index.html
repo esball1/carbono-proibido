@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Produção de Carbono</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculadora de Produção de Carbono</h1>
+        
+        <div class="formula">
+            1g bicarbonato + 1g vinagre = 0,134g carbono
+        </div>
+        
+        <div class="input-group">
+            <label for="bicarbonato">Quantidade de bicarbonato (g):</label>
+            <input type="number" id="bicarbonato" step="0.01" min="0" value="1">
+        </div>
+        
+        <div class="input-group">
+            <label for="vinagre">Quantidade de vinagre (g):</label>
+            <input type="number" id="vinagre" step="0.01" min="0" value="1">
+        </div>
+        
+        <button onclick="calcularCarbono()">Calcular Carbono Produzido</button>
+        
+        <div id="resultado" class="result"></div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
