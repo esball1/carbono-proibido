@@ -1,7 +1,7 @@
 {
   "name": "regra-de-3-composta",
   "version": "1.0.0",
-  "description": "Calculadora de regra de 3 composta para produção de carbono",
+  "description": "produção de carbono permitido",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
