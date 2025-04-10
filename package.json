@@ -1,0 +1,16 @@
+{
+  "name": "regra-de-3-composta",
+  "version": "1.0.0",
+  "description": "Calculadora de regra de 3 composta para produção de carbono",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
