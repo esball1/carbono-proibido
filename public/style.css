@@ -16,6 +16,7 @@ body {
 h1 {
     color: #333;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
 .formula {
@@ -37,12 +38,30 @@ label {
     font-weight: bold;
 }
 
-input {
+.input-with-unit {
+    display: flex;
+    gap: 10px;
+}
+
+.input-with-unit input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-with-unit select {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box;
 }
 
 button {
@@ -54,6 +73,8 @@ button {
     cursor: pointer;
     font-size: 16px;
     width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -68,4 +89,23 @@ button:hover {
     text-align: center;
     font-size: 18px;
     display: none;
+}
+
+.nerd-title {
+    color: #ff5722;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+@media (max-width: 480px) {
+    .input-with-unit {
+        flex-direction: column;
+    }
+    .input-with-unit select {
+        width: 100%;
+    }
 }
