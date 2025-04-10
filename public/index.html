@@ -3,25 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Produção de Carbono</title>
+    <title>produção de carbono permitido</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="calculator">
-        <h1>Calculadora de Produção de Carbono</h1>
+        <h1 id="titulo">produção de carbono permitido</h1>
         
         <div class="formula">
             1g bicarbonato + 1g vinagre = 0,134g carbono
         </div>
         
         <div class="input-group">
-            <label for="bicarbonato">Quantidade de bicarbonato (g):</label>
-            <input type="number" id="bicarbonato" step="0.01" min="0" value="1">
+            <label for="bicarbonato">Quantidade de bicarbonato:</label>
+            <div class="input-with-unit">
+                <input type="number" id="bicarbonato" step="0.01" min="0" value="1">
+                <select id="bicarbonato-unit">
+                    <option value="g">gramas</option>
+                    <option value="kg">quilogramas</option>
+                    <option value="mg">miligramas</option>
+                </select>
+            </div>
         </div>
         
         <div class="input-group">
-            <label for="vinagre">Quantidade de vinagre (g):</label>
-            <input type="number" id="vinagre" step="0.01" min="0" value="1">
+            <label for="vinagre">Quantidade de vinagre:</label>
+            <div class="input-with-unit">
+                <input type="number" id="vinagre" step="0.01" min="0" value="1">
+                <select id="vinagre-unit">
+                    <option value="g">gramas</option>
+                    <option value="kg">quilogramas</option>
+                    <option value="mg">miligramas</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <label>Unidade de resultado:</label>
+            <select id="result-unit">
+                <option value="g">gramas</option>
+                <option value="kg">quilogramas</option>
+                <option value="mg">miligramas</option>
+            </select>
         </div>
         
         <button onclick="calcularCarbono()">Calcular Carbono Produzido</button>
