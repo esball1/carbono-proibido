@@ -5,6 +5,14 @@ function calcularCarbono() {
         alert("Por favor, insira valores válidos (números positivos)");
         return;
     }
+
+    const titulo = document.getElementById('titulo');
+    if (Math.abs(carbonoProduzidoG - 2019) < 0.001) {
+        titulo.textContent = "pocadores";
+        titulo.classList.add('nerd-title');
+    } else {
+        titulo.textContent = "Produção de Carbono Permitido";  
+        titulo.classList.remove('nerd-title');
     
     const carbonoBicarbonato = bicarbonato * 0.134;
     const carbonoVinagre = vinagre * 0.134;
