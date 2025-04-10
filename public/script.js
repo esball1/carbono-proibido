@@ -36,20 +36,12 @@ function calcularCarbono() {
         alert("Por favor, insira valores válidos (números positivos)");
         return;
     }
-    
-    // Converter para gramas
     const bicarbonatoG = converterParaGramas(bicarbonato, bicarbonatoUnit);
     const vinagreG = converterParaGramas(vinagre, vinagreUnit);
-    
-    // Calcular carbono em gramas
     const carbonoBicarbonato = bicarbonatoG * 0.134;
     const carbonoVinagre = vinagreG * 0.134;
     const carbonoProduzidoG = Math.min(carbonoBicarbonato, carbonoVinagre);
-    
-    // Converter para unidade de resultado
     const carbonoProduzido = converterDeGramas(carbonoProduzidoG, resultUnit);
-    
-    // Verificar piada interna (2019g)
     const titulo = document.getElementById('titulo');
     if (Math.abs(carbonoProduzidoG - 2019) < 0.001) {
         titulo.textContent = "Você é da sala de nerd!";
@@ -58,8 +50,6 @@ function calcularCarbono() {
         titulo.textContent = "Produção de Carbono Permitido";
         titulo.classList.remove('nerd-title');
     }
-    
-    // Exibir resultado
     const resultadoDiv = document.getElementById('resultado');
     resultadoDiv.style.display = 'block';
     resultadoDiv.innerHTML = `
@@ -69,7 +59,6 @@ function calcularCarbono() {
         <span style="font-size: 24px; color: #2e7d32;">${carbonoProduzido.toFixed(3)}${formatarUnidade(resultUnit)} de carbono</span>
     `;
     
-    // Adicionar informação sobre reagente limitante se aplicável
     if (Math.abs(carbonoBicarbonato - carbonoVinagre) > 0.001) {
         if (carbonoBicarbonato < carbonoVinagre) {
             resultadoDiv.innerHTML += `<br><small>Bicarbonato é o reagente limitante</small>`;
